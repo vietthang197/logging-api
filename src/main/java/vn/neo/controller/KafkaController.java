@@ -23,7 +23,7 @@ public class KafkaController {
 
     @GetMapping
     public String test(@RequestParam String m) {
-        kafkaTemplate.send("test", m);
+        kafkaTemplate.send("log-test", m);
         logger.info("Request from client: {}", m);
         return m;
     }
